@@ -1,5 +1,5 @@
 ---
-title: markdown 查用语法
+title: markdown 常用语法
 date: 2016-08-06 14:30:55
 tags: markdown
 ---
