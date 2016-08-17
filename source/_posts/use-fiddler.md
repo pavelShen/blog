@@ -24,6 +24,14 @@ tags:
 
 ---
 
+## fiddler插件安装
+
+地址：http://www.telerik.com/fiddler/add-ons
+
+tip: 如果使用迅雷下载，记得选择只从原始地址下载，不然任务总是失败
+
+---
+
 ## 定制fiddler规则 ( Write a FiddlerScript Rule )
 
 菜单栏点击 Tools > Fiddler Options > Tools. 修改默认编辑器
@@ -41,3 +49,10 @@ tags:
     }
 
 访问localhost:8888 实际访问的是localhost:80
+
+---
+
+## Session List 操作
+
+- ctrl+f 查找
+- 选择session 按p 定为请求的父级 按c 定为请求的子集
