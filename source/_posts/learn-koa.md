@@ -7,7 +7,7 @@ tags:
 ---
 
 参考资料 http://javascript.ruanyifeng.com/nodejs/koa.html
-具体实际代码参考github库 坑反正先挖了
+具体实际代码参考github库 https://github.com/pavelShen/koa_project
 
 
 ## koa基础
@@ -86,6 +86,8 @@ tags:
 
 ---
 
+<!--more-->
+
 ## koa-router
 
 ### koa路由
@@ -122,3 +124,59 @@ this.status 为页面返回给你的状态码
 
     app.use(myRouter.routes());
     app.listen(3000);
+
+---
+
+## 日志
+
+### log4js
+
+    var log4js = require('log4js');
+
+    	log4js.configure({
+    	  appenders: [
+    	    { type: 'console' },
+    	    { type: 'file', filename: 'log/app.log', category: 'siteName' }
+    	  ]
+    	});
+
+    var logger = log4js.getLogger("siteName");
+
+    module.exports = logger;
+
+### 常用属性介绍
+坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
+
+---
+
+## 单元测试
+
+###  mocha + should + supertest
+
+#### package.js
+
+    "scripts": {
+      "test": "./node_modules/.bin/mocha test/*.test.js --timeout 20000",
+      "cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports test/*.test.js --timeout 20000"
+    }
+
+#### a.test.js
+
+    'use strict';
+
+    const should = require('should');
+    const supertest = require('supertest');
+    var restaurantData = require('../controller/restaurant.js');
+
+    describe('restaurantData type', function() {
+      it('restaurantData should return an Function', function(done) {
+        restaurantData.should.be.a.Function();
+        done();
+      });
+    });
+
+    describe('restaurantData isOK', function() {
+      it('restaurantData should getData', function(done) {
+        supertest('https://m.ele.me/restapi/shopping/restaurants?latitude=31.20745&longitude=121.59842&offset=40&limit=1').get('/').expect(200,done);
+      });
+    });
