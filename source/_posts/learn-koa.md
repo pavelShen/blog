@@ -6,7 +6,11 @@ tags:
   - nodejs
 ---
 
-参考资料 http://javascript.ruanyifeng.com/nodejs/koa.html
+## 参考资料
+  koa基础：http://javascript.ruanyifeng.com/nodejs/koa.html
+  log4js: http://qianduan.guru/2016/08/21/nodejs-lesson-1-log4js/
+  单元测试：http://taobaofed.org/blog/2015/12/29/nodejs-unit-tests-workflow/ 
+
 具体实际代码参考github库 https://github.com/pavelShen/koa_project
 
 
