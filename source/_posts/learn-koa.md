@@ -9,7 +9,7 @@ tags:
 ## 参考资料
   koa基础：http://javascript.ruanyifeng.com/nodejs/koa.html
   log4js: http://qianduan.guru/2016/08/21/nodejs-lesson-1-log4js/
-  单元测试：http://taobaofed.org/blog/2015/12/29/nodejs-unit-tests-workflow/ 
+  单元测试：http://taobaofed.org/blog/2015/12/29/nodejs-unit-tests-workflow/
 
 具体实际代码参考github库 https://github.com/pavelShen/koa_project
 
@@ -149,7 +149,20 @@ this.status 为页面返回给你的状态码
     module.exports = logger;
 
 ### 常用属性介绍
-坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
+
+**Appender** 日志的出口
+
+- Console 控制台输出
+- File 文件输出
+- [DateFile](https://github.com/nomiddlename/log4js-node/wiki/Date%20rolling%20file%20appender) 日志输出到文件，日志文件可以安特定的日期模式滚动
+- [DateFileSync](https://github.com/nomiddlename/log4js-node/wiki/Date%20rolling%20file%20appender%20-%20with%20synchronous%20file%20output%20modes) 同步模式
+- [SMTP](https://github.com/nomiddlename/log4js-node/wiki/SMTP) 输出日志到邮件
+- [Mailgun](https://github.com/nomiddlename/log4js-node/wiki/MailGun-Appender) 输出日志到邮件 通过（mailgun API）
+- [hook.io](https://github.com/nomiddlename/log4js-node/wiki/hook.io)
+- [GELF](https://github.com/nomiddlename/log4js-node/wiki/GELF)
+- [Multiprocess](https://github.com/nomiddlename/log4js-node/wiki/Multiprocess)
+- [Loggly](https://github.com/nomiddlename/log4js-node/wiki/Loggly)
+- [Clustered](https://github.com/nomiddlename/log4js-node/wiki/Clustered)
 
 ---
 
