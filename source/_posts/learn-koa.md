@@ -140,11 +140,21 @@ this.status 为页面返回给你的状态码
     	log4js.configure({
     	  appenders: [
     	    { type: 'console' },
-    	    { type: 'file', filename: 'log/app.log', category: 'siteName' }
+    	    { type: 'file', filename: 'log/app.log', category: 'siteName' },
+          {
+            type: 'logLevelFilter',
+            level: 'DEBUG',
+            category: 'category1',
+            appender: {
+              type: 'file',
+              filename: 'default.log'
+            }
+          }
     	  ]
     	});
 
     var logger = log4js.getLogger("siteName");
+    var logger2 = log4js.getLogger("category1");
 
     module.exports = logger;
 
@@ -163,6 +173,30 @@ this.status 为页面返回给你的状态码
 - [Multiprocess](https://github.com/nomiddlename/log4js-node/wiki/Multiprocess)
 - [Loggly](https://github.com/nomiddlename/log4js-node/wiki/Loggly)
 - [Clustered](https://github.com/nomiddlename/log4js-node/wiki/Clustered)
+
+
+# 待实践
+
+使用 logLevelFilter 和 level 来对日志的级别进行过滤，所有权重大于或者等于DEBUG的日志将会输出。这也是之前提到的日志级别权重的意义；
+通过 category 来选择要输出日志的类别，category2 下面的日志被过滤掉了，该配置也接受一个数组，例如 ['category1', 'category2']，这样配置两个类别的日志都将输出到文件中。
+
+**layout** 日志内容
+
+    // file: layout-pattern.js
+    var log4js = require('log4js');
+    log4js.configure({
+      appenders: [{
+        type: 'console',
+        layout: {
+          type: 'pattern',
+          pattern: '[%r] [%[%5.5p%]] - %m%n'
+        }
+      }]
+    })
+    var logger = log4js.getLogger('layout-pattern');
+    logger.debug("Time:", new Date());
+
+![示意图](http://7xrvqo.com1.z0.glb.clouddn.com/images/log4js/LOGGER_APPENDER_LAYOUT.365eb730.png)
 
 ---
 
