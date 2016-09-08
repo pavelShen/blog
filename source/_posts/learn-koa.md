@@ -196,6 +196,26 @@ this.status 为页面返回给你的状态码
     var logger = log4js.getLogger('layout-pattern');
     logger.debug("Time:", new Date());
 
+pattern 字符含义
+- %r - 本地时间
+- %p - 日志等级
+- %c - log category
+- %h - hostname
+- %m - 日志信息
+- %d - 日期格式化
+```
+%d{ISO8601}
+%d{ISO8601_WITH_TZ_OFFSET}
+%d{ABSOLUTE}
+%d{DATE}
+```
+- %% - %
+- %n - 换行
+- %x{<tokenname>} - token值
+- %[ and %] - 定义颜色
+
+
+
 ![示意图](http://7xrvqo.com1.z0.glb.clouddn.com/images/log4js/LOGGER_APPENDER_LAYOUT.365eb730.png)
 
 ---
