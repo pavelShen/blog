@@ -175,8 +175,6 @@ this.status 为页面返回给你的状态码
 - [Clustered](https://github.com/nomiddlename/log4js-node/wiki/Clustered)
 
 
-# 待实践
-
 使用 logLevelFilter 和 level 来对日志的级别进行过滤，所有权重大于或者等于DEBUG的日志将会输出。这也是之前提到的日志级别权重的意义；
 通过 category 来选择要输出日志的类别，category2 下面的日志被过滤掉了，该配置也接受一个数组，例如 ['category1', 'category2']，这样配置两个类别的日志都将输出到文件中。
 
