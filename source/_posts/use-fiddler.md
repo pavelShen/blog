@@ -68,3 +68,14 @@ tip: 如果使用迅雷下载，记得选择只从原始地址下载，不然任
 
 1. 选择多个rule，右击 选择Export all 导出 
 2. Add Rule 右侧的Import按钮 点击选择之前导出的文件进行导入
+
+---
+
+## 重发请求
+
+方法1：选择左侧session,右击 选择replay->reissue requests
+方法2：
+1. 在右侧composer的选项卡内选择Scratchpad
+2. 点击或者拖动左侧session至选项卡内
+3. 三次点击选中选项卡内的请求头部信息
+4. 点击Execute 发送
