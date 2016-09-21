@@ -84,4 +84,4 @@ tip: 如果使用迅雷下载，记得选择只从原始地址下载，不然任
 
 ## 导入/导出网络请求
 
-1.
+File->import session / File->export session 
