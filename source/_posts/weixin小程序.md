@@ -6,4 +6,8 @@ tags:
   - app
 ---
 
+参考资料
+
+-  [官方教程](https://mp.weixin.qq.com/debug/wxadoc/dev/?t=1474644087418)
+
 <!--more-->
