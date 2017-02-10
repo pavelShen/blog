@@ -2,6 +2,7 @@
 title: js片段1
 date: 2017-01-17 13:12:33
 tags:
+  - javascript
 ---
 
 ## 获取url中的参数 ##
