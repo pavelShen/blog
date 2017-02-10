@@ -1,5 +1,5 @@
 ---
-title: '''小程序填坑之路'''
+title: 小程序填坑之路
 date: 2016-09-26 08:53:00
 tags:
   - weixin
@@ -13,10 +13,10 @@ tags:
 - 在一个页面中有多个音频的情况下 
   如果直接在audio标签中通过模板变量修改src，使用play()方法会提示播放被中断，需要双击才能正确播放，
   但是可以通过
-  ```
-  this.audioCtx.setSrc(src);
-  this.audioCtx.play();   
-  ```
+  
+      this.audioCtx.setSrc(src);
+      this.audioCtx.play();   
+  
   的方式修改音频的播放地址,则一切ok
 
 相关文章：
