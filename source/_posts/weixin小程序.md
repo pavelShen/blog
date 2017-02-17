@@ -28,7 +28,7 @@ tags:
       <button formType="submit">提交</button>
 </form>
 ```
-```JACASCRIPT
+```javascript
 sendTempMessage(e){
   console.log(e.detail.formId)
 }
