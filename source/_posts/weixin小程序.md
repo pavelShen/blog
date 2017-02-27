@@ -38,6 +38,7 @@ sendTempMessage(e){
 - 微信开发者工具 textarea 超过140个汉字时 无法触发事件，手机实测ok
 - 小程序中想要修改对象的某个值，只能在修改了data之后，将整个对象重新赋值给data（setData就是个坑，希望以后能直接同步值）
 - data:image/jpg;base64    base64图片中的image要写全，某些生成工具生成的base64图给出的结果是data:img/jpg;base64图片将不会显示
+- textarea输入内容换行后，在输出的地方使用text组件，即可支持换行。
 
 ## 常见钩子函数：
 ```HTML
