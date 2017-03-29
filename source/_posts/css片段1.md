@@ -1,3 +1,9 @@
+---
+title: css片段1
+date: 2017-02-10 18:25:10
+tags: css
+---
+
 ## div边框重叠
 
 设置div的margin值为边框值的相反数：
@@ -89,7 +95,7 @@
 
 作用： 适合不同单位之间的计算
 
-坑： caniuse 上写 UC浏览器不兼容，但是小米下的uc 测下来ok 
+坑： caniuse 上写 UC浏览器不兼容，但是小米下的uc 测下来ok
 
 
 ## :last-of-type
