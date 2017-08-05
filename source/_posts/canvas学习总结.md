@@ -186,5 +186,7 @@ ctx.clip();
 裁切路径不会在 canvas 上绘制东西，而且它永远不受新图形的影响。这些特性使得它在特定区域里绘制图形时相当好用。( 可以把它理解成PS里面的选择工具 )
 **裁切区域需要通过save&restore方法去还原，因为是路径方法，所以要记得beginPath**
 
-## 参考文档
+## 相关文档
 MDN:https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial
+canvas动画：http://www.zhangxinxu.com/wordpress/2017/03/canvas-2d-cool-affect-skills-technology/
+canvas圆角：http://www.zhangxinxu.com/wordpress/2014/06/svg-canvas-image-border-radius/
