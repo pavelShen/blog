@@ -88,7 +88,8 @@ function findOutlier(int){
 
 ## Jaden Casing Strings（首字母大写）
 
-比较令人不解的是 为何第一个正则里面如果直接返回p1.toUpperCase() 会将空格替换掉
+比较令人不解的是 为何第一个正则里面如果直接返回p1.toUpperCase() 会将空格替换掉？
+replace函数的意思是将所有匹配到的内容替换掉，所以虽然只修改了p1但是也会把空格给替换掉
 
 #### 又low了，先处理了首字母，再处理空格后面的英文
 
