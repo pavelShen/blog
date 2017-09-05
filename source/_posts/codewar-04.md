@@ -1,6 +1,6 @@
 ---
-title: codewar-02
-date: 2017-09-04 22:50:14
+title: codewar-04
+date: 2017-09-06 00:50:14
 tags:
   - codewar
 ---
