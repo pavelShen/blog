@@ -61,3 +61,67 @@ function titleCase(title, minorWords) {
 ```
 
 ---
+
+## Does my number look big in this?(一个数是否为水仙花数)
+水仙花数是指一个 n 位数（n≥3 ），它的每个位上的数字的 n 次幂之和等于它本身（例如：1^3 + 5^3+ 3^3 = 153）。
+
+```javascript
+function narcissistic( value ) {
+  // Code me
+  let stringValue = value.toString()
+  let digit = stringValue.length
+  let result = 0 
+  
+  for(let i of stringValue){
+    i = parseInt(i)
+    result += Math.pow(i,digit)
+  }
+  
+  return result === value ? true : false
+}
+```
+
+#### 累加可以用数组的reduce
+```javascript
+function narcissistic( value ) {
+  return ('' + value).split('').reduce(function(p, c){
+    return p + Math.pow(c, ('' + value).length)
+    }, 0) == value;
+}
+```
+
+---
+
+## Vasya - Clerk (买票找零问题)
+
+#### 想的太复杂，最笨的办法也许就是最好的办法
+
+```javascript
+function tickets(peopleInLine){
+  let M25 = 0,M50 =0
+  for(let item of peopleInLine){
+    if(item===25){
+      M25 ++
+    }
+    else if(item===50){
+      M25 --
+      M50 ++
+    }
+    else if(item===100){
+      if(M50>0){
+        M50 --
+        M25 --
+      }
+      else{
+        M25 -= 3
+      }
+    }
+    
+    if(M25<0 || M50<0){
+      return 'NO'
+    }
+  }
+  
+  return 'YES'
+}
+```
